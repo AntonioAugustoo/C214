@@ -17,7 +17,7 @@ def buscar_e_mostrar_imagem():
         # Abre a imagem diretamente da resposta usando PIL
         imagem = Image.open(BytesIO(resposta.content))
         imagem.show()
-        print("\nSucesso! A imagem foi exibida na tela.")
+        print("\nImagem exibida com sucesso!")
 
     except requests.exceptions.RequestException as erro:
         print(f"\nOcorreu um erro ao tentar buscar a imagem: {erro}")
