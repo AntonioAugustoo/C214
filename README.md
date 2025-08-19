@@ -10,8 +10,6 @@ Projeto simples em Python para a disciplina de Engenharia de Software (C214). O 
 ### 🛠️ Como Usar
 
 #### 1️⃣ Pré-requisitos
-- Python instalado 🐍
-- Pip instalado 📦
 
 #### 2️⃣ Instalar Dependências
 ```bash
@@ -23,15 +21,11 @@ pip install -r requirements.txt
 python main.py
 ```
 
-- A imagem será exibida na tela 🖼️
-- Mensagem esperada:
 	- Buscando imagem em: https://picsum.photos/800/600
 	- Imagem exibida com sucesso!
 
----
 
 ## 🇺🇸 English
-
 ### 📄 About the Project
 Simple Python project for Software Engineering (C214) class. The goal is to demonstrate dependency management and build automation.
 
