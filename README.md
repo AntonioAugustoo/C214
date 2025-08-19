@@ -1,3 +1,4 @@
+
 # 🚀 Projeto de Demonstração de Build e Dependências / Build & Dependency Demo Project
 
 ## 🇧🇷 Português
@@ -10,6 +11,8 @@ Projeto simples em Python para a disciplina de Engenharia de Software (C214). O 
 ### 🛠️ Como Usar
 
 #### 1️⃣ Pré-requisitos
+- Python instalado 🐍
+- Pip instalado 📦
 
 #### 2️⃣ Instalar Dependências
 ```bash
@@ -21,11 +24,15 @@ pip install -r requirements.txt
 python main.py
 ```
 
+- A imagem será exibida na tela 🖼️
+- Mensagem esperada:
 	- Buscando imagem em: https://picsum.photos/800/600
 	- Imagem exibida com sucesso!
 
+---
 
 ## 🇺🇸 English
+
 ### 📄 About the Project
 Simple Python project for Software Engineering (C214) class. The goal is to demonstrate dependency management and build automation.
 
@@ -53,5 +60,15 @@ python main.py
 	- Image displayed successfully!
 
 ---
+
+## 📝 Histórico de Conflitos
+Ocorreu um conflito no arquivo `main.py` devido à existência de duas mensagens diferentes para o sucesso da exibição da imagem:
+- "Sucesso! A imagem foi exibida na telinha."
+- "Imagem exibida com sucesso no monitor!"
+
+O conflito foi resolvido mantendo uma única mensagem padronizada:
+- "Imagem exibida com sucesso!"
+
+Essa alteração garante clareza e padronização na saída do programa.
 
 ✨ Simples, prático e automatizado! / Simple, practical and automated!
