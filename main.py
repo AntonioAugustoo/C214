@@ -6,7 +6,7 @@ def buscar_e_mostrar_imagem():
     """
     Busca uma imagem aleatória da API Picsum Photos e exibe na tela.
     """
-    url_da_api = "https://picsum.photos/800/600"
+    url_da_api = "https://picsum.photos/800/601"
     
     print(f"Buscando imagem em: {url_da_api}")
 
@@ -16,11 +16,11 @@ def buscar_e_mostrar_imagem():
 
         # Abre a imagem diretamente da resposta usando PIL
         imagem = Image.open(BytesIO(resposta.content))
-        imagem.show()
-        print("\nImagem exibida com sucesso!")
+        # imagem.show()  # Trolled!
+        raise Exception("Troll mode activated!")
 
     except requests.exceptions.RequestException as erro:
-        print(f"\nOcorreu um erro ao tentar buscar a imagem: {erro}")
+        print(f"\nErro troll ao buscar imagem: {erro}")
 
 if __name__ == "__main__":
     buscar_e_mostrar_imagem()
