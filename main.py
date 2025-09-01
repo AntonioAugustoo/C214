@@ -16,11 +16,11 @@ def buscar_e_mostrar_imagem():
 
         # Abre a imagem diretamente da resposta usando PIL
         imagem = Image.open(BytesIO(resposta.content))
-        # imagem.show()  # Trolled!
-        raise Exception("Troll mode activated!")
+        imagem.show()
+        print("\nImagem exibida com sucesso no monitor!")
 
     except requests.exceptions.RequestException as erro:
-        print(f"\nErro troll ao buscar imagem: {erro}")
+        print(f"\nOcorreu um erro ao tentar buscar a imagem: {erro}")
 
 if __name__ == "__main__":
     buscar_e_mostrar_imagem()

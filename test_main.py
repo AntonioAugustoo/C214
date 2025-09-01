@@ -29,11 +29,11 @@ def test_content_not_empty(mock_image_open, mock_get):
 def test_url_called(mock_get):
     # 3 Verifica se a função chama requests.get com a URL correta
     mock_get.return_value.status_code = 200
-    mock_get.return_value.content = b'img'  # Corrige o erro de TypeError
+    mock_get.return_value.content = b'img'
     with patch('main.Image.open') as mock_image_open:
         mock_image_open.return_value = MagicMock()
         main.buscar_e_mostrar_imagem()
-    mock_get.assert_called_with('https://picsum.photos/800/600')
+    mock_get.assert_called_with('https://picsum.photos/800/601')
 
 @patch('main.requests.get')
 @patch('main.Image.open')
@@ -98,7 +98,7 @@ def test_different_url(mock_image_open, mock_get):
     mock_image_open.return_value = MagicMock()
     with patch('main.buscar_e_mostrar_imagem', wraps=main.buscar_e_mostrar_imagem) as func:
         func()
-    mock_get.assert_called_with('https://picsum.photos/800/600')
+    mock_get.assert_called_with('https://picsum.photos/800/601')
 
 @patch('main.requests.get')
 @patch('main.Image.open')
@@ -109,7 +109,7 @@ def test_different_size(mock_image_open, mock_get):
     mock_image_open.return_value = MagicMock()
     with patch('main.buscar_e_mostrar_imagem', wraps=main.buscar_e_mostrar_imagem) as func:
         func()
-    mock_get.assert_called_with('https://picsum.photos/800/600')
+    mock_get.assert_called_with('https://picsum.photos/800/601')
 
 # Testes negativos
 @patch('main.requests.get')

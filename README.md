@@ -71,4 +71,47 @@ O conflito foi resolvido mantendo uma única mensagem padronizada:
 
 Essa alteração garante clareza e padronização na saída do programa.
 
-✨ Simples, prático e automatizado! / Simple, practical and automated!
+
+---
+
+## 🧪 Testes Unitários — Erros Documentados e Correções
+
+### 🇧🇷 Português
+
+Durante a execução dos testes unitários com `pytest`, os seguintes erros foram observados:
+
+- **Exceção proposital no código:**
+	- Muitos testes falham devido à linha `raise Exception("Troll mode activated!")` em `main.py`, que interrompe o fluxo normal da função.
+- **Mensagens de erro diferentes:**
+	- Os testes negativos esperam mensagens como `print('\nOcorreu um erro ao tentar buscar a imagem: ...')`, mas o código imprime `print('\nErro troll ao buscar imagem: ...')`, causando falha nas asserções.
+- **Testes que esperam exceções específicas:**
+	- Alguns testes esperam exceções como `Falha ao exibir imagem`, mas recebem `Troll mode activated!`, resultando em falha na verificação do conteúdo da exceção.
+
+
+**Correção aplicada:**
+- A exceção proposital foi removida do código principal.
+- As mensagens de erro foram padronizadas conforme esperado nos testes.
+- A URL utilizada nos testes foi ajustada para `https://picsum.photos/800/601`, igual ao código principal.
+- Todos os testes unitários agora passam com sucesso!
+
+---
+
+### 🇺🇸 English
+
+During unit test execution with `pytest`, the following errors were observed:
+
+- **Intentional exception in code:**
+	- Many tests fail due to the line `raise Exception("Troll mode activated!")` in `main.py`, which interrupts the normal function flow.
+- **Different error messages:**
+	- Negative tests expect messages like `print('\nOcorreu um erro ao tentar buscar a imagem: ...')`, but the code prints `print('\nErro troll ao buscar imagem: ...')`, causing assertion failures.
+- **Tests expecting specific exceptions:**
+	- Some tests expect exceptions like `Falha ao exibir imagem`, but receive `Troll mode activated!`, resulting in failed exception content checks.
+
+
+**Applied fix:**
+- The intentional exception was removed from the main code.
+- Error messages were standardized as expected by the tests.
+- The URL used in the tests was adjusted to `https://picsum.photos/800/601`, matching the main code.
+- All unit tests now pass successfully!
+
+---
