@@ -60,4 +60,43 @@ python main.py
 
 ---
 
-✨ Simples, prático e automatizado! / Simple, practical and automated!
+
+---
+
+## 🧪 Testes Unitários
+
+### 🇧🇷 Português
+
+O projeto inclui 20 testes unitários em `test_main.py` usando `pytest` e `unittest.mock`:
+
+- **10 testes positivos:**
+	- Verificam sucesso na busca, abertura e exibição da imagem, chamadas corretas de funções, mensagens de sucesso e execução sem exceções.
+- **10 testes negativos:**
+	- Simulam erros como URL inválida, timeout, resposta HTTP diferente de 200, conteúdo inválido, falha ao abrir/exibir imagem, erros da API e exceções inesperadas.
+
+#### Como executar os testes:
+```bash
+pytest test_main.py
+```
+
+Todos os testes são comentados e cobrem cenários de sucesso e falha.
+
+---
+
+### 🇺🇸 English
+
+The project includes 20 unit tests in `test_main.py` using `pytest` and `unittest.mock`:
+
+- **10 positive tests:**
+	- Check success in fetching, opening and displaying the image, correct function calls, success messages and execution without exceptions.
+- **10 negative tests:**
+	- Simulate errors such as invalid URL, timeout, non-200 HTTP response, invalid content, failure to open/display image, API errors and unexpected exceptions.
+
+#### How to run the tests:
+```bash
+pytest test_main.py
+```
+
+All tests are commented and cover both success and failure scenarios.
+
+---
